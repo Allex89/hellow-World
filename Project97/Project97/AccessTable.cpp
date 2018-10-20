@@ -114,42 +114,36 @@ void AccessTable::RemoveItem(string name){
     item* p1;
     item* p2;
     
-    //Case 0 = Bucket is empty
     if(accessTable[index]->name == "empty")
         cout << name << " not found in the Access Table\n";
-    //case 1 = only one item contain in bucket and that item has matching name
     else if(accessTable[index]->name == name && accessTable[index]->next == NULL ){
         accessTable[index]->name = "empty";
         accessTable[index]->inf.type = "empty";
         accessTable[index]->inf.num = "empty";
         cout << name << "was removed from the Access Table\n";
     }
-    //case 2 = match is located in the first item in the bucket there are more item in the bucket
     else if (accessTable[index]->name == name){
         delptr = accessTable[index];
         accessTable[index] = accessTable[index]->next;
         delete delptr;
         cout << name << "was removed from the Access Table\n";
     }
-    //case3 = the bucket contain items but first item us not a match
     else {
-        p1 = accessTable[index]->next;
-        p2 = accessTable[index];
+			p1 = accessTable[index]->next;
+			p2 = accessTable[index];
         while(p1 !=NULL && p1->name !=name){
             p2 = p1;
             p1 = p1->next;
         }
     
-    //case3.1 = no match
-    if(p1 == NULL)
-        cout << name << " not found in the Access Table\n";
-    //case3.2 = match is found
-    else{
-        delptr = p1;
-        p1 = p1->next;
-        p2->next = p1;
-        delete delptr;
-        cout << name << "was removed from the Access Table\n";
-    }
+		if(p1 == NULL)
+			cout << name << " not found in the Access Table\n";
+		else{
+			delptr = p1;
+			p1 = p1->next;
+			p2->next = p1;
+			delete delptr;
+			cout << name << "was removed from the Access Table\n";
+		}
     }
 }
