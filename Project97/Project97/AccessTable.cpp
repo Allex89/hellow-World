@@ -37,9 +37,9 @@ void AccessTable::AddItem(string name, string type, string num){
         if(accessTable[index]->name == "empty" )
             return count;
         else{
-            //count++;
+            count++;
             item* ptr = accessTable[index];
-            while(ptr !=NULL){
+			while(ptr->next!=NULL){
                 count++;
                 ptr = ptr->next;
             }
@@ -65,7 +65,7 @@ void AccessTable::AddItem(string name, string type, string num){
         if(ptr->name == "empty" )
             cout << "index '" << index << "' is empty"<<endl;
         else{
-            cout << "index " << index << "Contains The Following Items: \n";
+            cout << "index " << index << " Contains The Following Items: \n";
             while(ptr != NULL){
                 cout << "-------------------\n";
                 cout << "Name: " <<ptr->name << endl;
@@ -120,13 +120,13 @@ void AccessTable::RemoveItem(string name){
         accessTable[index]->name = "empty";
         accessTable[index]->inf.type = "empty";
         accessTable[index]->inf.num = "empty";
-        cout << name << "was removed from the Access Table\n";
+        cout << name << " was removed from the Access Table\n";
     }
     else if (accessTable[index]->name == name){
         delptr = accessTable[index];
         accessTable[index] = accessTable[index]->next;
         delete delptr;
-        cout << name << "was removed from the Access Table\n";
+        cout << name << " was removed from the Access Table\n";
     }
     else {
 			p1 = accessTable[index]->next;
@@ -143,7 +143,7 @@ void AccessTable::RemoveItem(string name){
 			p1 = p1->next;
 			p2->next = p1;
 			delete delptr;
-			cout << name << "was removed from the Access Table\n";
+			cout << name << " was removed from the Access Table\n";
 		}
     }
 }

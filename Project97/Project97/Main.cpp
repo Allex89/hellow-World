@@ -21,6 +21,7 @@ int main()
     access.AddItem("I","k1","810");
     access.AddItem("J","k2","1000");
     access.printItemsInIndex(2);
+	access.PrintTable();
     
     while(name != "exit"){
         cout << "Remove:"; 

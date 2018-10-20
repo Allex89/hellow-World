@@ -1,11 +1,9 @@
-﻿Build started 10/21/2018 01:23:23.
+﻿Build started 10/21/2018 01:36:02.
      1>Project "C:\Users\ardal\Desktop\Temporary\University Task\Compiler\hellow-World\Project97\Project97\Project97.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt AccessTable.cpp Main.cpp
-         Main.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt AccessTable.cpp
          AccessTable.cpp
      1>c:\users\ardal\desktop\temporary\university task\compiler\hellow-world\project97\project97\accesstable.cpp(85): warning C4018: '<' : signed/unsigned mismatch
-         Generating Code...
        Link:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\ardal\Desktop\Temporary\University Task\Compiler\hellow-World\Project97\Debug\Project97.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\ardal\Desktop\Temporary\University Task\Compiler\hellow-World\Project97\Debug\Project97.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\ardal\Desktop\Temporary\University Task\Compiler\hellow-World\Project97\Debug\Project97.lib" /MACHINE:X86 Debug\AccessTable.obj
          Debug\Main.obj
@@ -14,4 +12,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:02.22
+Time Elapsed 00:00:01.47
