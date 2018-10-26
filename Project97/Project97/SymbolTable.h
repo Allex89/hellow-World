@@ -21,5 +21,8 @@ public:
 	Node* AddIfNotExist(string name, string type);
 	Node* Find(string name);
 	bool Exists(string name);
+	int NumberOfItemInIndex(int index);
+	void PrintTable();
+	void PrintItemInIndex(int index);
 };
 #endif /* SYMBOLTABLE_H */

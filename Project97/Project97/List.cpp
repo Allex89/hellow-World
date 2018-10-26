@@ -18,12 +18,21 @@ string Node::getName(){
 	return name;
 }
 
+string Node::getType() {
+	return type;
+}
+
+
 List::List(){
 	root = NULL;
 }
 
 List::~List(){
 	delete root;
+}
+
+Node* List::getRoot() {
+	return root;
 }
 
 void List::AddNode(Node* node) {

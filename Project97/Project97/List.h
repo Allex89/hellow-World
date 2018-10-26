@@ -7,18 +7,20 @@ private:
 	string name;
 	string type;
 public:
-	Node* Next;
-	std::string getName();
 	Node(string, string);
 	Node();
 	~Node();
+	string getName();
+	string getType();
+	Node* Next;
 };
 
 class List {
 private:
 	Node* root;
 public:
-	void AddNode(Node*);
+	Node* getRoot();
+	void AddNode(Node* node);
 	Node* FindByName(string name);
 	List();
 	~List();

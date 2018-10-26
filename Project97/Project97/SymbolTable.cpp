@@ -10,7 +10,7 @@ SymbolTable::SymbolTable(int size){
 	tableSize = size;
 	symbolTable = new List*[size];
 	for (int i = 0; i < size; i++) {
-		symbolTable[i] = NULL;
+		symbolTable[i]= NULL;
 	}
 }
 SymbolTable::~SymbolTable() {
@@ -67,4 +67,47 @@ bool SymbolTable::Exists(string name){
 	Node* node = list->FindByName(name);
 	return node != NULL;
 }
+
+void SymbolTable::PrintTable() {
+			
+	for (int i = 0; i < tableSize; i++) {
+		cout << "----------------\n";
+		if (symbolTable[i] != NULL) {
+			cout << "Index '" << i << "' " << endl;
+			cout << "Name = " << symbolTable[i]->getRoot()->getName() << endl;
+			cout << "Type = " << symbolTable[i]->getRoot()->getType() << endl;
+			cout << "Contains: " << NumberOfItemInIndex(i) << endl;
+		}
+		else
+			cout << "Index '" << i << "' is empty" <<endl;
+	}
+	
+}
+
+void SymbolTable::PrintItemInIndex(int index) {
+	Node* ptr = symbolTable[index]->getRoot()->Next;
+	int count = 1;
+	cout << "----------------\n";
+	cout << "Index = " << index << endl;
+	while (ptr != NULL) {
+		cout << "#" << count << endl;
+		cout << "Name = " << ptr->getName() << endl;
+		cout << "Type = " << ptr->getType() << endl;
+		ptr = ptr->Next;
+		count++;
+	}
+	
+}
+
+int SymbolTable::NumberOfItemInIndex(int index) {
+	Node* ptr = symbolTable[index]->getRoot();
+	int count = -1;
+	while (ptr != NULL) {
+		count++;
+		ptr = ptr->Next;
+	}
+	return count;
+}
+
+
 
